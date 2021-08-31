@@ -1,0 +1,588 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.logo
+{
+    position: relative;
+    width: 175px;
+    height: 100px;
+    background: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+nav
+{
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav img
+{
+    width: 150px;
+}
+
+.nav-links
+{
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-links ul li a
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    z-index: 1000;
+}
+
+.nav-links ul li::after
+{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.nav-links ul li:hover::after
+{
+    width: 100%;
+    z-index: 1000;
+}
+
+.pengantar
+{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+}
+
+.pengantar h1
+{
+    font-size: 60px;
+}
+
+.pengantar p
+{
+    margin: 5px 0 40px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+}
+
+.explore-button
+{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.explore-button:hover
+{
+    border: 1px solid rgb(250, 115, 115);
+    background: rgb(250, 115, 115);
+    transition: 1s;
+}
+
+.header
+{
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: #111;
+    color: #fff;
+}
+
+.header header
+{
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; 
+}
+
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.568);
+    mix-blend-mode: overlay;
+}
+
+nav .fa
+{
+    display: none;
+}
+
+@media(max-width: 700px)
+{
+    .pengantar h1
+    {
+        font-size: 20px;
+        z-index: 1000;
+    }
+
+    .nav-links ul li
+    {
+        display: block;
+    }
+
+    .nav-links
+    {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.911);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        left: -200px;
+        text-align: left;
+        z-index: 1001;
+        transition: 1s;
+    }
+
+    nav .fa
+    {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .kotak
+    {
+        flex-direction: column;
+    }
+
+    .foto
+    {
+        margin: auto;
+        display: block;
+    }
+
+    .h1
+    {
+        font-size: 50px;
+    }
+
+    .kolom
+    {
+        flex-direction: column;
+    }
+
+    .contact h1
+    {
+        font-size: 14px;
+    }
+
+    .footer p
+    {
+        font-size: 10px;
+        text-align: center;
+    }
+}
+@media(max-width: 600px)
+{
+    .container .musiccont .box
+    {
+        height: 27rem;
+        width: 90%;
+        flex-flow: column;
+    }
+
+    .container .musiccont .box .pics
+    {
+        height: 80%;
+        width: 100%;
+    }
+
+    .container .musiccont .box .lagu
+    {
+        width: 20%;
+        width: 100%;
+    }
+
+    .tombolnaik
+    {
+        position: absolute;
+        display: block;
+        text-align: right;
+    }
+}
+
+/*--------------------------------------------- MY GALLERY ---------------------------------------------*/
+.gallery
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.gallery h1
+{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.gallery p
+{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    text-align: center;
+}
+
+.kotak
+{
+    width: 50%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto
+{
+    flex-basis: 31%;
+    background: rgba(0, 0, 0, 0.836);
+    border-radius: 2px;
+    margin-bottom: 5%;
+    padding: 2px 2px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.foto:hover
+{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 8);
+}
+
+/*--------------------------------------------- MY PHOTOS ---------------------------------------------*/
+.fotodiri
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.fotodiri p
+{
+    text-align: center;
+    font-size: 14px;
+}
+
+.kolom
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kolomfoto
+{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kolomfoto img
+{
+    width: 100%;
+    display: block;
+}
+
+.layer
+{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover
+{
+    background: rgba(255, 0, 0, 0.24);
+}
+
+/*--------------------------------------------- MY BIODATA ---------------------------------------------*/
+.biodata
+{
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding-top: 50px;
+    background-color: rgba(190, 190, 190, 0.692);
+    object-fit: cover;
+}
+
+h1
+{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p
+{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    text-align: center;
+}
+
+.data
+{
+    position: relative;
+    margin-left: 10%;
+}
+
+li
+{
+    list-style-type: circle;
+}
+
+.kolom
+{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*--------------------------------------------- MY HOBBY ---------------------------------------------*/
+.hobby
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hobby p
+{
+    text-align: center;
+}
+
+.kolomhobby
+{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    text-align: left;
+}
+
+.kolomhobby img
+{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.kolomhobby p
+{
+    padding: 0;
+    text-align: justify;
+}
+
+.kolomhobby h3
+{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*--------------------------------------------- FAV MUSICS ---------------------------------------------*/
+.container
+{
+    background: url("images/background4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .heading
+{
+    font-size: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    text-shadow: 0 .5rem 1rem #000;
+    color: white;
+}
+
+.container .musiccont
+{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.container .musiccont .box
+{
+    height: 16rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 1rem;
+    text-shadow: 0 .5rem 1rem black;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.container .musiccont .box .pics
+{
+    height: 100%;
+    width: 22%;
+}
+
+.container .musiccont .box .pics img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .musiccont .box .lagu
+{
+    width: 75%;
+}
+
+.container .musiccont .box .lagu audio
+{
+    width: 100%;
+    outline: none;
+}
+
+.container .musiccont .box .lagu audio::-webkit-media-controls-enclosure
+{
+    background: none;
+}
+
+/*--------------------------------------------- CONTACT ME ---------------------------------------------*/
+.contact
+{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact h1
+{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+
+}
+/*--------------------------------------------- TOMBOL NAIK ---------------------------------------------*/
+.tombolnaik
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: black;
+    bottom: 40px;
+    right: 50px;
+}
+
+/*--------------------------------------------- ABOUT ME ---------------------------------------------*/
+.footer
+{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: grey;
+}
+
+.footer h4
+{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer p
+{
+    text-align: center;
+}
+
+.icons .fa
+{
+    color: rgb(177, 27, 27);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o
+{
+    color: red;
+}
